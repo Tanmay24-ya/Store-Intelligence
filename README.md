@@ -118,8 +118,31 @@ All responses conform to the Pydantic models defined in `app/schemas.py`.
 
 ---
 
-## 🎨 UI Screenshots (optional)
-> *Add screenshots of the dashboard here – you can export the Streamlit UI via the `View → Screenshot` menu or use `st.camera_input` to embed images.*
+## 🎨 UI Screenshots
+
+<p align="center">
+  <img src="assets/Screenshot%202026-06-01%20151525.png" width="800"/>
+</p>
+
+<p align="center">
+  <img src="assets/Screenshot%202026-06-01%20151538.png" width="800"/>
+</p>
+
+<p align="center">
+  <img src="assets/Screenshot%202026-06-01%20151548.png" width="800"/>
+</p>
+
+<p align="center">
+  <img src="assets/Screenshot%202026-06-01%20151558.png" width="800"/>
+</p>
+
+<p align="center">
+  <img src="assets/Screenshot%202026-06-01%20151605.png" width="800"/>
+</p>
+
+<p align="center">
+  <img src="assets/Screenshot%202026-06-01%20151611.png" width="800"/>
+</p>
 
 ---
 
