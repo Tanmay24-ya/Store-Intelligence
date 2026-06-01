@@ -12,7 +12,7 @@
 flowchart TD
     A[RTSP Camera Feeds] -->|Video Stream| B[YOLOv8 Object Detection]
     B -->|Bounding Boxes| C[ByteTrack ID Association]
-    C -->|Entry/Exit Tripwire| D[Event Engine (JSONL)]
+    C -->|Entry/Exit Tripwire| D[Event Engine JSONL]
     D -->|Events + Stats| E[FastAPI Caching Core]
     E -->|REST API| F[AI Recommendation Engine]
     F -->|Recommendations| G[Streamlit Dashboard]
