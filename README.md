@@ -291,7 +291,7 @@ The analytics engine maps computer vision events to real retail zones including:
 
 This spatial mapping enables zone-level engagement analysis, congestion detection, conversion funnel tracking, and merchandising recommendations.
 
-![Store Layout](assets/store-layout.png)
+![Store Layout](app/assets/store-layout.png)
 
 ---
 
