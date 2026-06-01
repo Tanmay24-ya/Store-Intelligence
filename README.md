@@ -279,6 +279,21 @@ Live camera intelligence module showcasing occupancy tracking, shopper movement 
 ![Multi-Camera Intelligence Panel](app/assets/Screenshot%202026-06-01%20151611.png)
 
 ---
+## 🏬 Store Layout Context
+
+The analytics engine maps computer vision events to real retail zones including:
+
+- Entrance
+- Makeup Zone
+- Skincare Zone
+- Checkout Area
+- Brand Gondolas
+
+This spatial mapping enables zone-level engagement analysis, congestion detection, conversion funnel tracking, and merchandising recommendations.
+
+![Store Layout](assets/store-layout.png)
+
+---
 
 ## 🤝 Contributing
 
