@@ -1,0 +1,15 @@
+{"timestamp": "2026-05-31T19:34:52.647449", "camera": "CAM3", "event_type": "person_detected", "confidence": 1.0, "details": {"track_id": 1, "first_side": "right"}}
+{"timestamp": "2026-05-31T19:34:56.064308", "camera": "CAM3", "event_type": "person_detected", "confidence": 1.0, "details": {"track_id": 4, "first_side": "right"}}
+{"timestamp": "2026-05-31T19:34:59.307177", "camera": "CAM3", "event_type": "person_detected", "confidence": 1.0, "details": {"track_id": 11, "first_side": "right"}}
+{"timestamp": "2026-05-31T19:34:59.514065", "camera": "CAM3", "event_type": "person_detected", "confidence": 1.0, "details": {"track_id": 13, "first_side": "left"}}
+{"timestamp": "2026-05-31T19:35:09.001606", "camera": "CAM3", "event_type": "person_detected", "confidence": 1.0, "details": {"track_id": 20, "first_side": "right"}}
+{"timestamp": "2026-05-31T19:36:25.457110", "camera": "CAM3", "event_type": "person_detected", "confidence": 1.0, "details": {"track_id": 26, "first_side": "left"}}
+{"timestamp": "2026-05-31T19:37:08.743724", "camera": "CAM3", "event_type": "person_detected", "confidence": 1.0, "details": {"track_id": 29, "first_side": "left"}}
+{"timestamp": "2026-05-31T19:38:01.456493", "camera": "CAM3", "event_type": "person_detected", "confidence": 1.0, "details": {"track_id": 41, "first_side": "right"}}
+{"timestamp": "2026-05-31T19:38:05.117075", "camera": "CAM3", "event_type": "person_detected", "confidence": 1.0, "details": {"track_id": 44, "first_side": "left"}}
+{"timestamp": "2026-05-31T19:38:11.218678", "camera": "CAM3", "event_type": "person_detected", "confidence": 1.0, "details": {"track_id": 48, "first_side": "right"}}
+{"timestamp": "2026-05-31T19:38:14.199888", "camera": "CAM3", "event_type": "person_detected", "confidence": 1.0, "details": {"track_id": 54, "first_side": "right"}}
+{"timestamp": "2026-05-31T19:38:15.934580", "camera": "CAM3", "event_type": "person_detected", "confidence": 1.0, "details": {"track_id": 58, "first_side": "left"}}
+{"timestamp": "2026-05-31T19:38:31.262512", "camera": "CAM3", "event_type": "person_detected", "confidence": 1.0, "details": {"track_id": 61, "first_side": "right"}}
+{"timestamp": "2026-05-31T19:38:42.741178", "camera": "CAM3", "event_type": "person_detected", "confidence": 1.0, "details": {"track_id": 63, "first_side": "right"}}
+{"timestamp": "2026-05-31T19:38:42.743193", "camera": "CAM3", "event_type": "person_detected", "confidence": 1.0, "details": {"track_id": 64, "first_side": "right"}}
