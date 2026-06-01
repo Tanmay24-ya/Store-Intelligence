@@ -1,4 +1,19 @@
 # Purplle Store Intelligence Engine
+<p align="center">
+
+<a href="https://store-intelligence-ta.streamlit.app/">
+  <img src="https://img.shields.io/badge/Live-Demo-success?style=for-the-badge">
+</a>
+
+<a href="https://store-intelligence-2a9l.onrender.com/docs">
+  <img src="https://img.shields.io/badge/API-Docs-blue?style=for-the-badge">
+</a>
+
+<a href="https://github.com/Tanmay24-ya/Store-Intelligence">
+  <img src="https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge">
+</a>
+
+</p>
 
 ## 🎯 Overview
 
