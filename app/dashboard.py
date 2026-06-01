@@ -8,7 +8,7 @@ API_URL = "http://127.0.0.1:8000"
 
 st.set_page_config(
     page_title="Purplle Store Intelligence Engine",
-    page_icon="🏪",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -114,7 +114,7 @@ def fetch_api_data():
 data = fetch_api_data()
 
 if data is None:
-    st.error("🔌 Unable to connect to the FastAPI Backend Server.")
+    st.error(" Unable to connect to the FastAPI Backend Server.")
     st.info("Please make sure the Uvicorn backend server is running in the background at `http://127.0.0.1:8000`.")
     st.stop()
 
@@ -126,7 +126,7 @@ if data is None:
 
 
 # ----------------- SIDEBAR STATUS -----------------
-st.sidebar.image("https://img.icons8.com/nolan/128/security-camera.png", width=70)
+# Sidebar telemetry icon removed (image not loading)
 st.sidebar.title("Telemetry Feeds")
 st.sidebar.markdown("---")
 
@@ -144,31 +144,31 @@ for name, status in feeds:
 st.sidebar.markdown("---")
 
 # Render Architecture Pipeline inside the Sidebar
-st.sidebar.subheader("🛠️ Platform System Architecture")
+st.sidebar.subheader(" Platform System Architecture")
 st.sidebar.markdown("""
 <div style="background-color: #0c0f19; border: 1px solid #1e2640; padding: 12px; border-radius: 10px; font-family: monospace; font-size: 0.72rem; line-height: 1.35; color: #a5b4fc;">
-  🎥 RTSP Camera Feeds<br>
+   RTSP Camera Feeds<br>
   &nbsp;&nbsp;│<br>
   &nbsp;&nbsp;▼<br>
-  🧠 YOLOv8 Object Detection<br>
+   YOLOv8 Object Detection<br>
   &nbsp;&nbsp;│<br>
   &nbsp;&nbsp;▼<br>
-  🔗 ByteTrack ID Association<br>
+   ByteTrack ID Association<br>
   &nbsp;&nbsp;│<br>
   &nbsp;&nbsp;▼<br>
-  📡 Entry/Exit Tripwire & Zones<br>
+   Entry/Exit Tripwire & Zones<br>
   &nbsp;&nbsp;│<br>
   &nbsp;&nbsp;▼<br>
-  📝 JSON Lines Logging Engine<br>
+   JSON Lines Logging Engine<br>
   &nbsp;&nbsp;│<br>
   &nbsp;&nbsp;▼<br>
-  ⚡ FastAPI Caching Core<br>
+   FastAPI Caching Core<br>
   &nbsp;&nbsp;│<br>
   &nbsp;&nbsp;▼<br>
-  💡 AI Strategic Recommendations<br>
+   AI Strategic Recommendations<br>
   &nbsp;&nbsp;│<br>
   &nbsp;&nbsp;▼<br>
-  📊 Premium Streamlit SaaS
+   Premium Streamlit SaaS
 </div>
 """, unsafe_allow_html=True)
 
@@ -177,7 +177,7 @@ st.sidebar.markdown("""
 col_title, col_status = st.columns([4, 1])
 
 with col_title:
-    st.title("🏪 Purplle Store Intelligence Engine")
+    st.title(" Purplle Store Intelligence Engine")
     st.markdown("##### Real-Time Computer Vision Spatial Telemetry & POS Decision-Support Platform")
 
 with col_status:
@@ -193,7 +193,7 @@ st.divider()
 
 
 # ----------------- FEATURE 1: RETAIL ANOMALY CENTER -----------------
-st.subheader("⚠️ Security & Operational Anomaly Center")
+st.subheader(" Security & Operational Anomaly Center")
 
 col_alert_card, col_alert_log = st.columns([1, 2])
 
@@ -257,7 +257,7 @@ st.divider()
 col_funnel, col_zone = st.columns([1, 1])
 
 with col_funnel:
-    st.subheader("📊 Customer Conversion Funnel")
+    st.subheader(" Customer Conversion Funnel")
     
     # Load funnel stages
     df_funnel = pd.DataFrame(funnel_data["stages"])
@@ -280,7 +280,7 @@ with col_funnel:
     st.plotly_chart(fig_funnel, use_container_width=True)
 
 with col_zone:
-    st.subheader("📍 Spatial Zone Engagement")
+    st.subheader(" Spatial Zone Engagement")
     
     # Zone stats donut chart
     df_zone = pd.DataFrame({
@@ -307,7 +307,7 @@ st.divider()
 
 
 # ----------------- NEW ADDITION: CAMERA SNAPSHOT PANEL -----------------
-st.subheader("🎥 Active Computer Vision Feeds & YOLOv8 Tracking Snapshots")
+st.subheader(" Active Computer Vision Feeds & YOLOv8 Tracking Snapshots")
 st.markdown("##### Real-time spatial tracking overlay and entry/exit virtual boundaries generated from camera streams.")
 
 col_snap1, col_snap2, col_snap3 = st.columns(3)
@@ -334,21 +334,21 @@ st.divider()
 
 
 # ----------------- NEW ADDITION: CV INTELLIGENCE METRICS -----------------
-st.subheader("👁️ Computer Vision Spatial Telemetry")
+st.subheader(" Computer Vision Spatial Telemetry")
 c_cv1, c_cv2, c_cv3, c_cv4 = st.columns(4)
 c_cv1.metric("Unique Shoppers Detected", metrics["total_tracks"], delta=None)
 c_cv2.metric("Peak Occupancy Today", max(12, metrics["occupancy"]), delta="+25% vs yesterday")
 c_cv3.metric("Average Zone Dwell Time", "4m 22s", delta="-12s speed optimization")
 c_cv4.metric("Most Active Zone", "Makeup Zone (CAM 2)", delta="64% share")
 
-st.subheader("💎 Store Entrance Telemetry")
+st.subheader(" Store Entrance Telemetry")
 c1, c2, c3, c4 = st.columns(4)
 c1.metric("Live Occupancy", metrics["occupancy"], delta=None)
 c2.metric("Total Entrance Entries", metrics["entries"], delta="+14% today")
 c3.metric("Total Entrance Exits", metrics["exits"])
 c4.metric("Total System Log Events", metrics["total_events"])
 
-st.subheader("💸 Business Revenue KPIs (POS Integration)")
+st.subheader(" Business Revenue KPIs (POS Integration)")
 c5, c6, c7, c8 = st.columns(4)
 c5.metric("Gross Revenue (GMV)", f"₹{analytics['gmv']:,.0f}", delta="+₹14,210 vs target")
 c6.metric("Net Revenue (NMV)", f"₹{analytics['nmv']:,.2f}")
@@ -359,15 +359,15 @@ st.divider()
 
 
 # ----------------- FEATURE 3: AI RECOMMENDATIONS ENGINE -----------------
-st.subheader("💡 AI-Assisted Strategic Recommendations")
+st.subheader(" AI-Assisted Strategic Recommendations")
 
 rec_cols = st.columns(4)
 
 category_icons = {
-    "Traffic": "🚀",
-    "Revenue": "💰",
-    "Placement": "🎯",
-    "Promotion": "🎁"
+    "Traffic": "",
+    "Revenue": "",
+    "Placement": "",
+    "Promotion": ""
 }
 
 for i, rec in enumerate(recommendations):
@@ -398,7 +398,7 @@ st.divider()
 col_chart_left, col_chart_right = st.columns(2)
 
 with col_chart_left:
-    st.subheader("🏆 Top Brands by GMV Contribution")
+    st.subheader(" Top Brands by GMV Contribution")
     brand_df = pd.DataFrame(brands["top_brands"])
     fig_brand = px.bar(
         brand_df.head(10),
@@ -419,7 +419,7 @@ with col_chart_left:
     st.plotly_chart(fig_brand, use_container_width=True)
 
 with col_chart_right:
-    st.subheader("🛒 Department Performance")
+    st.subheader(" Department Performance")
     dept_df = pd.DataFrame(departments["department_sales"])
     fig_dept = px.bar(
         dept_df,
@@ -445,7 +445,7 @@ st.divider()
 col_left_list, col_right_list = st.columns(2)
 
 with col_left_list:
-    st.subheader("📡 Real-Time CV Security Tracking Feed")
+    st.subheader(" Real-Time CV Security Tracking Feed")
     
     events_list = events.get("events", [])
     if events_list:
@@ -470,7 +470,7 @@ with col_left_list:
         st.info("Awaiting computer vision telemetry feeds...")
 
 with col_right_list:
-    st.subheader("🏷️ Brand Sales Performance Leaderboard")
+    st.subheader(" Brand Sales Performance Leaderboard")
     brand_perf_df = pd.DataFrame(brand_performance["brand_performance"])
     st.dataframe(
         brand_perf_df.head(10).rename(
