@@ -7,12 +7,25 @@ VIDEO_PATH = "data/videos/CAM 1.mp4"
 
 model = YOLO("yolov8n.pt")
 
+import os
+
 counted_ids = set()
 
-zone_stats = {
-    "skincare_visitors": 0,
-    "makeup_visitors": 0
-}
+# Load existing stats if file exists, otherwise initialize them
+if os.path.exists("data/zone_stats.json"):
+    try:
+        with open("data/zone_stats.json", "r") as f:
+            zone_stats = json.load(f)
+    except Exception:
+        zone_stats = {
+            "skincare_visitors": 0,
+            "makeup_visitors": 0
+        }
+else:
+    zone_stats = {
+        "skincare_visitors": 0,
+        "makeup_visitors": 0
+    }
 
 results = model.track(
     source=VIDEO_PATH,

@@ -7,8 +7,23 @@ model = YOLO("yolov8n.pt")
 
 counted_ids = set()
 
-with open("data/zone_stats.json") as f:
-    zone_stats = json.load(f)
+import os
+
+# Load existing stats if file exists, otherwise initialize them
+if os.path.exists("data/zone_stats.json"):
+    try:
+        with open("data/zone_stats.json", "r") as f:
+            zone_stats = json.load(f)
+    except Exception:
+        zone_stats = {
+            "skincare_visitors": 0,
+            "makeup_visitors": 0
+        }
+else:
+    zone_stats = {
+        "skincare_visitors": 0,
+        "makeup_visitors": 0
+    }
 
 results = model.track(
     source=VIDEO_PATH,
