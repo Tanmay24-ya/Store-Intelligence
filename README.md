@@ -53,32 +53,31 @@ J --> K
 * **FastAPI** – Serves cached analytics (`/metrics`, `/anomalies`, `/funnel`, `/recommendations`).
 * **Streamlit** – Premium UI with glassmorphism, dark theme, and interactive Plotly charts.
 
----
 ## 🔄 End-to-End Workflow
 
 ```mermaid
 flowchart TD
 
-A[Camera Feed]
+A[Store Camera Feed]
 --> B[YOLOv8 Person Detection]
 
 B
---> C[ByteTrack Multi Object Tracking]
+--> C[ByteTrack Multi-Object Tracking]
 
 C
---> D[Entry Exit Counting]
+--> D[Entry / Exit Analytics]
 
 C
 --> E[Zone Occupancy Monitoring]
 
 D
---> F[Event Generation]
+--> F[Event Engine]
 
 E
 --> F
 
 F
---> G[Analytics Engine]
+--> G[FastAPI Analytics Core]
 
 G
 --> H[Anomaly Detection]
@@ -89,50 +88,32 @@ G
 G
 --> J[Recommendation Engine]
 
-H --> K[FastAPI]
-
+H --> K[Streamlit Dashboard]
 I --> K
-
 J --> K
+```
 
-K --> L[Streamlit Dashboard]
-
----
-
-## ✨ Core Features
-
-| Feature | Description | UI Element |
-|---|---|---|
-| **Retail Anomaly Center** | Detects zone congestion, after‑hours intrusion, low‑engagement dips. | ⚠️ Active Alerts card + severity‑sorted table |
-| **Advanced Funnel Analytics** | Stores‑to‑checkout conversion funnel with drop‑off percentages. | 📊 Funnel chart |
-| **AI‑Assisted Recommendations** | Cross‑references CV traffic & POS revenue to suggest merchandising actions. | 💡 Recommendation cards |
-| **CV Telemetry Metrics** | Unique shoppers, peak occupancy, average dwell time, most active zone. | 📈 Metric cards |
-| **Camera Snapshot Panel** | Static snapshots with bounding boxes & tripwire overlay for CAM 1‑3. | 🖼️ Image panels |
-| **Revenue & Brand KPIs** | GMV, NMV, transactions, brand contribution, department performance. | 📊 Bar charts |
-
-All emojis have been removed for a professional look.
+The workflow illustrates how raw video streams are transformed into actionable retail intelligence through real-time computer vision, event processing, analytics generation, and business intelligence dashboards.
 
 ---
 
-# 📈 Business Impact
-
-Place this after Workflow.
-
-```md
 ## 📈 Business Impact
 
-The Purplle Store Intelligence Engine transforms retail operations from reactive monitoring to proactive decision-making.
+The **Purplle Store Intelligence Engine** transforms traditional retail stores into intelligent, data-driven environments by combining real-time computer vision analytics with operational intelligence.
 
-### Key Benefits
+Instead of relying on manual observation, store managers gain instant visibility into customer movement, occupancy patterns, engagement levels, and operational bottlenecks through a unified analytics dashboard.
 
-- Real-time occupancy visibility
-- Automated customer traffic analysis
-- Detection of congestion hotspots
-- Better workforce allocation
-- Improved merchandising strategies
-- Data-driven operational decisions
+### 🎯 Key Business Benefits
 
-### Expected Outcomes
+- **Real-Time Occupancy Monitoring** – Track live store occupancy and customer flow.
+- **Congestion Detection** – Identify overcrowded zones before customer experience degrades.
+- **Operational Visibility** – Gain continuous insight into shopper behavior and store performance.
+- **Workforce Optimization** – Allocate staff efficiently based on customer traffic patterns.
+- **Data-Driven Merchandising** – Understand which store sections attract the highest engagement.
+- **Improved Customer Experience** – Reduce bottlenecks and improve in-store navigation.
+- **Actionable Recommendations** – Receive AI-powered suggestions to optimize store operations.
+
+### 📊 Expected Outcomes
 
 | Area | Impact |
 |--------|--------|
@@ -140,12 +121,71 @@ The Purplle Store Intelligence Engine transforms retail operations from reactive
 | Staffing Efficiency | Increased |
 | Operational Visibility | Real-Time |
 | Store Utilization | Optimized |
-| Conversion Opportunities | Enhanced |
 | Decision Making | Data-Driven |
+| Congestion Management | Enhanced |
+| Revenue Opportunities | Increased |
 
-By combining computer vision telemetry with retail analytics, store managers gain actionable insights that can directly improve customer engagement and business performance.
+### 💡 Strategic Value
+
+By transforming raw camera feeds into actionable intelligence, the Store Intelligence Engine enables retail managers to make faster, smarter, and more informed decisions. The platform bridges the gap between physical store activity and business performance, helping retailers optimize operations while delivering a superior shopping experience.
+
+### 🚀 Future Scope
+
+- Heatmap-based shopper movement analysis
+- Multi-store analytics and benchmarking
+- Predictive footfall forecasting
+- AI-powered staffing recommendations
+- Real-time customer journey analytics
+- Advanced inventory and merchandising intelligence
 
 ---
+
+## ✨ Core Features
+
+The **Purplle Store Intelligence Engine** combines real-time computer vision, retail analytics, and business intelligence to provide a comprehensive view of in-store operations and customer behavior.
+
+| Feature | Description | Business Value |
+|----------|-------------|----------------|
+| **Real-Time Person Detection** | YOLOv8 detects shoppers across multiple camera streams with high accuracy and low latency. | Provides live visibility into store activity. |
+| **Multi-Object Tracking** | ByteTrack assigns persistent IDs to shoppers, enabling movement tracking across frames. | Prevents double-counting and enables behavioral analytics. |
+| **Entry & Exit Analytics** | Virtual tripwires monitor customer ingress and egress in real time. | Measures store traffic and occupancy trends. |
+| **Occupancy Monitoring** | Continuously tracks the number of people present inside the store. | Helps prevent overcrowding and optimize staffing. |
+| **Zone Analytics** | Monitors shopper activity across different store sections such as Skincare, Makeup, and Checkout. | Identifies high-engagement and underperforming zones. |
+| **Retail Anomaly Center** | Detects unusual patterns such as congestion, sudden traffic spikes, and operational irregularities. | Enables proactive issue resolution. |
+| **Advanced Funnel Analytics** | Analyzes the customer journey from store entry to checkout. | Identifies conversion bottlenecks and drop-off points. |
+| **AI-Powered Recommendation Engine** | Generates actionable recommendations based on traffic patterns and store performance. | Supports data-driven decision making. |
+| **FastAPI Analytics Backend** | Exposes structured analytics through scalable REST APIs. | Enables integration with external systems and dashboards. |
+| **Interactive Streamlit Dashboard** | Presents KPIs, trends, alerts, and recommendations through a modern UI. | Delivers actionable insights to store managers. |
+| **Camera Intelligence Panel** | Displays processed camera snapshots with tracking overlays and occupancy indicators. | Provides visual verification of analytics. |
+| **Event-Driven Analytics Pipeline** | Stores and processes occupancy, entry/exit, and zone events for downstream analytics. | Creates a scalable foundation for future intelligence modules. |
+
+### 📊 Key Performance Metrics
+
+The platform continuously monitors and reports:
+
+- Total Footfall
+- Current Occupancy
+- Unique Shoppers
+- Peak Occupancy
+- Average Dwell Time
+- Zone-wise Engagement
+- Entry vs Exit Trends
+- Conversion Funnel Metrics
+- Active Alerts & Anomalies
+- Revenue & Performance KPIs
+
+### 🎯 Designed For
+
+- Store Managers
+- Operations Teams
+- Retail Analysts
+- Regional Managers
+- Business Intelligence Teams
+- Customer Experience Teams
+
+---
+
+
 
 ## 📦 Installation & Setup
 
