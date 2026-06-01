@@ -54,6 +54,50 @@ J --> K
 * **Streamlit** – Premium UI with glassmorphism, dark theme, and interactive Plotly charts.
 
 ---
+## 🔄 End-to-End Workflow
+
+```mermaid
+flowchart TD
+
+A[Camera Feed]
+--> B[YOLOv8 Person Detection]
+
+B
+--> C[ByteTrack Multi Object Tracking]
+
+C
+--> D[Entry Exit Counting]
+
+C
+--> E[Zone Occupancy Monitoring]
+
+D
+--> F[Event Generation]
+
+E
+--> F
+
+F
+--> G[Analytics Engine]
+
+G
+--> H[Anomaly Detection]
+
+G
+--> I[Funnel Analytics]
+
+G
+--> J[Recommendation Engine]
+
+H --> K[FastAPI]
+
+I --> K
+
+J --> K
+
+K --> L[Streamlit Dashboard]
+
+---
 
 ## ✨ Core Features
 
