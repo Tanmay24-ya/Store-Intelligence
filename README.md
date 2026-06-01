@@ -6,23 +6,44 @@
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ System Architecture
 
 ```mermaid
-flowchart TD
-    A[RTSP Camera Feeds] -->|Video Stream| B[YOLOv8 Object Detection]
-    B -->|Bounding Boxes| C[ByteTrack ID Association]
-    C -->|Entry/Exit Tripwire| D[Event Engine JSONL]
-    D -->|Events + Stats| E[FastAPI Caching Core]
-    E -->|REST API| F[AI Recommendation Engine]
-    F -->|Recommendations| G[Streamlit Dashboard]
-    style A fill:#2d3748,stroke:#4c51bf,color:#e2e8f0
-    style B fill:#3b82f6,stroke:#0ea5e9,color:#e2e8f0
-    style C fill:#6366f1,stroke:#a78bfa,color:#e2e8f0
-    style D fill:#10b981,stroke:#6ee7b7,color:#e2e8f0
-    style E fill:#c2410c,stroke:#f59e0b,color:#e2e8f0
-    style F fill:#a855f7,stroke:#d8b4fe,color:#e2e8f0
-    style G fill:#0f172a,stroke:#1e293b,color:#cbd5e1
+flowchart LR
+
+A["Store Cameras"]
+--> B["YOLOv8 Detection"]
+
+B
+--> C["ByteTrack Tracking"]
+
+C
+--> D["Zone Analytics"]
+
+C
+--> E["Entry Exit Analytics"]
+
+D
+--> F["Event Store"]
+
+E
+--> F
+
+F
+--> G["FastAPI Analytics Core"]
+
+G
+--> H["Anomaly Detection"]
+
+G
+--> I["Funnel Analytics"]
+
+G
+--> J["Recommendation Engine"]
+
+H --> K["Streamlit Dashboard"]
+I --> K
+J --> K
 ```
 
 * **Camera Feeds** – 3 + RTSP streams (Skincare, Makeup, Entrance)
