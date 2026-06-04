@@ -15,6 +15,19 @@
 
 </p>
 
+## 🚀 Live Deployment
+
+### Live Dashboard
+[https://store-intelligence-ta.streamlit.app/](https://store-intelligence-ta.streamlit.app/)
+
+### Backend API Documentation
+[https://store-intelligence-2a9l.onrender.com/docs](https://store-intelligence-2a9l.onrender.com/docs)
+
+### Source Code Repository
+[https://github.com/Tanmay24-ya/Store-Intelligence](https://github.com/Tanmay24-ya/Store-Intelligence)
+
+---
+
 ## 🎯 Overview
 
 **Purplle Store Intelligence Engine** is a full‑stack, production‑grade retail analytics platform that fuses **real‑time computer vision** (YOLOv8 + ByteTrack) with **POS transaction data** to deliver actionable insights for store managers.  The system powers a premium SaaS‑style dashboard built with **Streamlit**, backed by a high‑performance **FastAPI** backend.
@@ -310,7 +323,17 @@ This spatial mapping enables zone-level engagement analysis, congestion detectio
 
 ---
 
+## 📄 Documentation
+
+| Document | Description |
+|---|---|
+| [DESIGN.md](docs/DESIGN.md) | Full system architecture, data flow, and AI decision logic |
+| [CHOICES.md](docs/CHOICES.md) | Technology, model, schema, and architecture decision rationale |
+
+---
+
 ## 🤝 Contributing
+
 
 1. Fork the repository.
 2. Create a feature branch (`git checkout -b feature/awesome-feature`).
